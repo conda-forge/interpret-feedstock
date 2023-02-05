@@ -19,17 +19,16 @@ source:
 build:
   number: 0
   noarch: python
-  skip: True  # [py<=36 or py>=310]
   script: cd ./python/interpret/ && {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >= 3.7.*
     - pip
     - setuptools
     - wheel
   run:
-    - python
+    - python >= 3.7.*
     - interpret-core =={{ version }}
     # in setup.py
     - setuptools
