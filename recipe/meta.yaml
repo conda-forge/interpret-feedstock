@@ -1,13 +1,15 @@
 {% set name = "interpret" %}
-{% set version = "0.2.7" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  sha256: 4f5b3afe7ebaad7a0cf148b572dce1ab405852f058c1406d6dc9583a01999c64
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/interpretml/interpret/archive/7e5f94d3a3d946bdffe1b4124036f43dd45b44dc.tar.gz
+  # curl -sL https://github.com/interpretml/interpret/archive/7e5f94d3a3d946bdffe1b4124036f43dd45b44dc.tar.gz | openssl sha256
+  sha256: d52a4b7868697fcdd021242d7fedf662d3a1533a50168750510ef63eadd1f945
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   # url: https://github.com/interpretml/interpret/releases/download/{{ version }}/interpret-{{ version }}.tar.gz
   # url: https://github.com/interpretml/interpret/archive/v{{ version }}.tar.gz
   # git_url: https://github.com/interpretml/interpret.git
@@ -16,16 +18,16 @@ source:
 
 build:
   number: 0
-  # enable in v0.3.0:  noarch: python
-  skip: True  # [py>=39 or py2k or py<37]
-  skip: True  # [not win]
-  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
+  skip: True  # [py<=36 or py>=310]
+  script: cd ./python/interpret/ && {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python
-    - setuptools
     - pip
+    - setuptools
+    - wheel
   run:
     - python
     - interpret-core =={{ version }}
@@ -53,9 +55,6 @@ requirements:
     - dash_cytoscape >=0.1.1
     - gevent >=1.3.6
     - requests >=2.19.0
-    - dash-table >=4.1.0   # remove in 0.3.0
-    - dash-html-components # remove in 0.3.0
-    - dash-core-components # remove in 0.3.0
 
 test:
   requires:
@@ -89,3 +88,4 @@ about:
 extra:
   recipe-maintainers:
     - paulbkoch
+    - interpret-ml
