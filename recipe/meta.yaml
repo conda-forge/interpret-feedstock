@@ -11,7 +11,7 @@ source:
   sha256: 32093001b384f6fcca88231abe79b359df4110f76164056e1d7428585cba0779
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: cd ./python/interpret/ && {{ PYTHON }} -m pip install . -vv
 
@@ -40,7 +40,7 @@ requirements:
     - SALib >=1.3.3
     - shap >=0.28.5
     - dill >=0.2.5
-    - skope-rules >=1.0.1
+    # - skope-rules >=1.0.1    fails on python 3.10
     - treeinterpreter >=0.2.2
     - dash >=1.0.0 # dash 2.* removed the dependencies on: dash-html-components, dash-core-components, dash-table
     - dash-core-components >=1.0.0 # dash 2.* removes the need for this dependency
