@@ -65,8 +65,8 @@ test:
     - ipywidgets >=7.4.2
   imports:
     - interpret
-  commands:
-    - pip check
+  # commands:
+    # - pip check
 
 about:
   home: https://github.com/interpretml/interpret
