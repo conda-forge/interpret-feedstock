@@ -73,7 +73,7 @@ about:
     https://github.com/interpretml/interpret
   license: MIT
   license_file: LICENSE
-  doc_url: https://interpret.ml/docs/getting-started
+  doc_url: https://interpret.ml/docs
   dev_url: https://interpret.ml/docs/installation-guide.html
 
 extra:
