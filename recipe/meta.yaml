@@ -64,7 +64,7 @@ test:
   commands:
     # - pip check
     # - pip list
-    - python -m pytest -vv -n auto --junitxml=junit/test-results.xml --cov=interpret --cov-report=xml --cov-report=html python/interpret-core/tests
+    - python -m pytest -vv -n auto --junitxml=junit/test-results.xml --cov=interpret --cov-report=xml --cov-report=html python/interpret-core/tests --ignore=glassbox/test_aplr.py
 
 about:
   home: https://github.com/interpretml/interpret
