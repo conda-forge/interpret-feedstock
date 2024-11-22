@@ -1,5 +1,6 @@
 {% set name = "interpret" %}
 {% set version = "0.6.6" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8.*
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8.*
+    - python >={{ python_min }}
     - interpret-core =={{ version }}
     # Equiv. to extras.
     - psutil >=5.6.2
@@ -43,6 +44,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     # for pip check
     - pip
     # pure test requirements
