@@ -11,7 +11,7 @@ source:
   sha256: 96ef2819abe151b4cf4ebd2882e3b091d751d5e185a9d44c25d1ed538b39553a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: cd ./python/interpret/ && {{ PYTHON }} -m pip install . -vv
 
