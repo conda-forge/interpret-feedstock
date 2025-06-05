@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/interpretml/interpret/archive/9805b78284cacc2711a1da7c4de2c31c716bedfe.tar.gz
-  sha256: 22bce6261c908b0368c8dd2911694c0ee0767a4ea594e54b7208bad6a30412a2
+  url: https://github.com/interpretml/interpret/archive/2e82c6f768bfff3976a86f0a072eb1d93988e46b.tar.gz
+  sha256: bfba67699ece74c604f8bbd96632bbff5ea7cb8e41c8b5567df8c465d31b9d3d
 
 build:
   number: 0
