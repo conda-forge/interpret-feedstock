@@ -1,5 +1,5 @@
 {% set name = "interpret" %}
-{% set version = "0.6.11" %}
+{% set version = "0.6.12" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/interpretml/interpret/archive/2e82c6f768bfff3976a86f0a072eb1d93988e46b.tar.gz
-  sha256: bfba67699ece74c604f8bbd96632bbff5ea7cb8e41c8b5567df8c465d31b9d3d
+  url: https://github.com/interpretml/interpret/archive/099a1010fae7289e8d3b2aa951ede0dbc596fba9.tar.gz
+  sha256: c36b71bbb7c78517f0edc97e94934d672fcfdfd4c9c1ad3280b1c4b96e550d88
 
 build:
   number: 0
