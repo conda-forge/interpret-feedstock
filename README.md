@@ -19,15 +19,15 @@ Let there be light.
 
 https://github.com/interpretml/interpret
 
-
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18588&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/interpret-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/interpret-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/interpret-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -155,5 +155,6 @@ Feedstock Maintainers
 =====================
 
 * [@interpret-ml](https://github.com/interpret-ml/)
+* [@mgorny](https://github.com/mgorny/)
 * [@paulbkoch](https://github.com/paulbkoch/)
 
