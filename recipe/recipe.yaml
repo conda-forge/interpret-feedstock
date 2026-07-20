@@ -22,11 +22,18 @@ outputs:
     build:
       script:
         - if: win
-          then: .\build.bat -conda && copy .\bld\lib\libebm_win_x64.dll "%LIBRARY_BIN%\libebm.dll"
+          then:
+            - .\build.bat -conda
+            - copy .\bld\lib\libebm_win_x64.dll "%LIBRARY_BIN%\libebm.dll"
+            - copy .\bld\lib\libebm_win_x64.lib "%LIBRARY_BIN%\libebm.lib"
         - if: linux
-          then: sh ./build.sh -conda && cp ./bld/lib/libebm.so "$PREFIX/lib/libebm.so"
+          then:
+            - sh ./build.sh -conda
+            - cp ./bld/lib/libebm.so "$PREFIX/lib/libebm.so"
         - if: osx
-          then: sh ./build.sh -conda && cp ./bld/lib/libebm.dylib "$PREFIX/lib/libebm.dylib"
+          then:
+            - sh ./build.sh -conda
+            - cp ./bld/lib/libebm.dylib "$PREFIX/lib/libebm.dylib"
 
     requirements:
       build:
