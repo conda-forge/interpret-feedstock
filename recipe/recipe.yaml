@@ -23,9 +23,9 @@ outputs:
       script:
         - if: win
           then:
-            - .\build.bat -conda
-            - copy .\bld\lib\libebm_win_x64.dll "%LIBRARY_BIN%\libebm.dll"
-            - copy .\bld\lib\libebm_win_x64.lib "%LIBRARY_BIN%\libebm.lib"
+            - .\build.bat -conda -release_64
+            - copy .\bld\lib\libebm_win_x64.dll %LIBRARY_BIN%\libebm.dll
+            - copy .\bld\lib\libebm_win_x64.lib %LIBRARY_BIN%\libebm.lib
         - if: linux
           then:
             - sh ./build.sh -conda
