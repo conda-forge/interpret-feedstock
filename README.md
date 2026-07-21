@@ -1,5 +1,5 @@
-About interpret-feedstock
-=========================
+About libebm-feedstock
+======================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/interpret-feedstock/blob/main/LICENSE.txt)
 
@@ -24,11 +24,50 @@ Current build status
 
 
 <table><tr>
-    <td>All platforms:</td>
+    <td>GitHub Actions</td>
     <td>
       <a href="https://github.com/conda-forge/interpret-feedstock/actions/workflows/conda-build.yml">
         <img src="https://github.com/conda-forge/interpret-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
+    </td>
+  </tr>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18588&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/interpret-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18588&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/interpret-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18588&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/interpret-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18588&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/interpret-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -39,27 +78,29 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-interpret-green.svg)](https://anaconda.org/conda-forge/interpret) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/interpret.svg)](https://anaconda.org/conda-forge/interpret) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/interpret.svg)](https://anaconda.org/conda-forge/interpret) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/interpret.svg)](https://anaconda.org/conda-forge/interpret) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-interpret--core-green.svg)](https://anaconda.org/conda-forge/interpret-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/interpret-core.svg)](https://anaconda.org/conda-forge/interpret-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/interpret-core.svg)](https://anaconda.org/conda-forge/interpret-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/interpret-core.svg)](https://anaconda.org/conda-forge/interpret-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libebm-green.svg)](https://anaconda.org/conda-forge/libebm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libebm.svg)](https://anaconda.org/conda-forge/libebm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libebm.svg)](https://anaconda.org/conda-forge/libebm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libebm.svg)](https://anaconda.org/conda-forge/libebm) |
 
-Installing interpret
-====================
+Installing libebm
+=================
 
-Installing `interpret` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libebm` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `interpret` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `interpret, interpret-core, libebm` can be installed with `conda`:
 
 ```
-conda install interpret
+conda install interpret interpret-core libebm
 ```
 
 or with `mamba`:
 
 ```
-mamba install interpret
+mamba install interpret interpret-core libebm
 ```
 
 It is possible to list all of the versions of `interpret` available on your platform with `conda`:
@@ -129,17 +170,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating interpret-feedstock
-============================
+Updating libebm-feedstock
+=========================
 
-If you would like to improve the interpret recipe or build a new
+If you would like to improve the libebm recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/interpret-feedstock are
+Note that all branches in the conda-forge/libebm-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
